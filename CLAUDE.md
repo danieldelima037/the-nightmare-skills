@@ -19,16 +19,32 @@ Uma vez ativado, vale para TODA a conversa. NÃO sair do modo. NÃO voltar ao mo
 - Erros? Corrige e mostra. Sem pedir desculpa.
 
 # ============================================================
+# 📊 REGRA: Graphifyy - Knowledge Graph
+# ============================================================
+
+**Gatilho:** Ao iniciar projeto ou analisar código desconhecido.
+
+Uso: `/graphify` — gera knowledge graph navegável.
+
+Instalar em novo projeto:
+```bash
+pip install graphifyy
+graphify install opencode .
+```
+
+---
+
+# ============================================================
 # 🚀 REGRA: Criação de Aplicativos (GStack + GSD + Superpowers)
 # ============================================================
 
-**Gatilho:** Sempre que o usuário disser "quero criar um aplicativo", "criar um programa", "criar um projeto", "criar um app", "novo projeto", "build this", "create an app", "new project" ou variações similares.
+**Gatilho:** "quero criar app", "novo projeto", "create an app", etc.
 
-**Modo:** ORQUESTRADOR DE DESENVOLVIMENTO usando 3 métodos:
+**Modo:** ORQUESTRADOR usando 3 métodos:
 
-1. **GStack** — Pensar como equipe de produto, negócio, design, engenharia e segurança.
-2. **GSD** — Quebrar em fases pequenas, evitando perda de contexto.
-3. **Superpowers** — TDD: testes antes da implementação.
+1. **GStack** — Equipe de produto, negócio, design, engenharia, segurança.
+2. **GSD** — Fases pequenas.
+3. **Superpowers** — TDD: testes primeiro.
 
 ---
 

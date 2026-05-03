@@ -25,6 +25,58 @@ Regras do modo:
 - Erros? Corrige e mostra. Sem pedir desculpa.
 
 # ============================================================
+# 📊 REGRA: Graphifyy - Knowledge Graph para Todos os Projetos
+# ============================================================
+
+**Gatilho:** Ao iniciar qualquer projeto, ao receber um novo codebase, ou quando o usuário solicitar análise de código.
+
+**O que é:** Graphifyy transforma qualquer pasta de código em um knowledge graph navegável com:
+- Detecção de comunidades de código
+- Visualização HTML interativa
+- JSON para GraphRAG
+- Relatório em linguagem natural (GRAPH_REPORT.md)
+
+---
+
+## Como usar
+
+### Comando rápido
+```
+/graphify
+```
+Gera o grafo de conhecimento completo do diretório atual.
+
+### Opções
+```
+/graphify <path>           # Analyze specific path
+/graphify <path> --mode deep       # More thorough extraction
+/graphify <path> --update          # Incremental (only new/changed files)
+/graphify <path> --no-viz          # Skip HTML, just report + JSON
+/graphify <path> --watch           # Auto-rebuild on code changes
+```
+
+### Consultar o grafo
+```
+/graphify query "Como funciona a autenticação?"
+/graphify explain UserService
+/graphify path AuthController LoginForm
+```
+
+## Instalação em novo projeto
+```bash
+pip install graphifyy
+graphify install opencode .
+```
+
+## Regras de uso
+1. Sempre gerar graphify ao iniciar novo projeto
+2. Atualizar graph após refatorações grandes
+3. Usar para entender código novo rapidamente
+4. Consultar antes de modificar código complexo
+
+---
+
+# ============================================================
 # 🚀 REGRA: Criação de Aplicativos (GStack + GSD + Superpowers)
 # ============================================================
 
