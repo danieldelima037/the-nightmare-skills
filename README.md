@@ -1,52 +1,194 @@
+<div align="center">
+
 # 🦴 The Nightmare Skills
 
-**Regras de desenvolvimento para IAs de código.** Combina 3 estratégias em um sistema plug-and-play:
+**Development rules for AI coding assistants.**
 
-1. **🦴 Modo Caveman** — Respostas diretas, curtas, sem enrolação. Permanente.
-2. **🚀 GStack** — Brainstorming multi-papel (CEO, UX, Eng, Segurança, QA, PM) antes de codar.
-3. **⚡ GSD** — Quebra do projeto em fases pequenas para não perder contexto.
-4. **🧪 Superpowers** — TDD rigoroso: testes primeiro, código depois.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/danieldelima037/the-nightmare-skills/releases)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/danieldelima037/the-nightmare-skills/pulls)
 
-## Como usar
+*Stop your AI from writing 2000 lines of untested spaghetti code.*
 
-### Opção 1 — Copiar o arquivo pro seu projeto
+[English](#english) · [Português](#português)
 
-Copie o arquivo correspondente à sua ferramenta para a raiz do seu projeto:
+</div>
 
-| Ferramenta | Arquivo | Comando |
-|-----------|---------|---------|
-| **Gemini / Antigravity** | `GEMINI.md` | Copiar para `~/.gemini/GEMINI.md` |
-| **Claude Code** | `CLAUDE.md` | Copiar para a raiz do projeto |
-| **OpenCode** | `OPENCODE.md` | Copiar para a raiz do projeto |
-| **Cursor** | `.cursorrules` | Copiar para a raiz do projeto |
-| **Qualquer IA** | `RULES.md` | Colar no system prompt ou config |
+---
 
-### Opção 2 — Mandar a IA ler direto do GitHub
+## English
 
-Cole isto na conversa com sua IA:
+### What is this?
+
+A plug-and-play ruleset that makes any AI coding assistant work the way you actually want:
+
+| Rule | What it does |
+|------|-------------|
+| 🦴 **Caveman Mode** | Short, direct answers. No essays. Permanent for the session. |
+| 🚀 **GStack** | Think like a product team (CEO, UX, Eng, Security, QA, PM) before writing code. |
+| ⚡ **GSD** | Break projects into small phases. Never dump everything at once. |
+| 🧪 **Superpowers** | Strict TDD: tests first, code second, refactor third. |
+
+### Quick Install
+
+**One command** — run in your project root:
+
+```bash
+# Linux/macOS
+curl -sSL https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/install/install.sh | bash -s -- claude
+
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/install/install.ps1 -OutFile install.ps1; .\install.ps1 -Tool claude
+```
+
+Replace `claude` with your tool: `gemini`, `opencode`, `cursor`, `codex`, `copilot`, `windsurf`, or `all`.
+
+### Manual Install
+
+Copy the right file to your project root:
+
+| Tool | File | Where to put it |
+|------|------|-----------------|
+| **Claude Code** | `CLAUDE.md` | Project root |
+| **Gemini / Antigravity** | `GEMINI.md` | `~/.gemini/GEMINI.md` (global) or project root |
+| **OpenCode** | `OPENCODE.md` | Project root |
+| **Cursor** | `.cursorrules` | Project root |
+| **Codex** | `AGENTS.md` | Project root |
+| **GitHub Copilot** | `copilot-instructions.md` | `.github/copilot-instructions.md` |
+| **Windsurf** | `.windsurfrules` | Project root |
+| **Any AI** | `RULES.md` | Paste in system prompt |
+
+### Zero-install (just paste this)
+
+Tell your AI:
 
 ```
-Leia e siga as instruções de: https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/RULES.md
+Read and follow: https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/RULES.md
 ```
 
-## O que cada modo faz
+### How it works
 
-### 🦴 Modo Caveman
-- Ativo permanentemente na conversa
-- Respostas curtas e diretas
-- Sem textão, sem enrolação
-- Código? Faz. Bug? Esmaga. Pergunta? Responde curto.
+**When you say** "create an app", "new project", "build this", etc:
 
-### 🚀 GStack + GSD + Superpowers (ativa quando pedir pra criar app)
+```
+PHASE 1 → GStack    → Brainstorm with 6 roles. Full spec. NO code yet.
+PHASE 2 → GSD       → Break into small executable phases.
+PHASE 3 → Superpowers → TDD: tests first, code second.
+PHASE 4 → Review    → Auto-review after each phase. Fix before moving on.
+```
 
-**Gatilho:** "quero criar um app", "novo projeto", "criar um programa", etc.
+**Caveman mode** is always active — every response is short and direct.
 
-**Fluxo:**
-1. **FASE 1 — GStack:** Brainstorming com 6 papéis. Gera especificação completa. Não coda nada.
-2. **FASE 2 — GSD:** Quebra em fases pequenas e executáveis.
-3. **FASE 3 — Superpowers:** Implementa com TDD (testes primeiro).
-4. **FASE 4 — Revisão:** Auto-review após cada fase.
+### Compatibility
 
-## Licença
+| Platform | Status | File |
+|----------|--------|------|
+| Claude Code | ✅ Tested | `CLAUDE.md` |
+| Gemini / Antigravity | ✅ Tested | `GEMINI.md` |
+| OpenCode | ✅ Tested | `OPENCODE.md` |
+| Cursor | ✅ Compatible | `.cursorrules` |
+| Codex (OpenAI) | ✅ Compatible | `AGENTS.md` |
+| GitHub Copilot | ✅ Compatible | `copilot-instructions.md` |
+| Windsurf / Codeium | ✅ Compatible | `.windsurfrules` |
+| Aider | ⚙️ Use `RULES.md` in `.aider.conf.yml` | `RULES.md` |
+| ChatGPT / GPT-4 | ⚙️ Paste `RULES.md` as system prompt | `RULES.md` |
 
-MIT — use, modifique, distribua como quiser.
+### Project Structure
+
+```
+the-nightmare-skills/
+├── RULES.md                    # Universal rules (any AI)
+├── CLAUDE.md                   # Claude Code
+├── GEMINI.md                   # Gemini / Antigravity
+├── OPENCODE.md                 # OpenCode
+├── AGENTS.md                   # Codex
+├── .cursorrules                # Cursor
+├── .windsurfrules              # Windsurf
+├── copilot-instructions.md     # GitHub Copilot
+├── rules/
+│   ├── caveman.md              # 🦴 Caveman rules (standalone)
+│   └── gstack-gsd-superpowers.md # 🚀 Full workflow (standalone)
+├── examples/
+│   └── before-after.md         # Before vs after comparison
+├── install/
+│   ├── install.sh              # Bash installer
+│   └── install.ps1             # PowerShell installer
+├── CHANGELOG.md
+├── LICENSE                     # MIT
+└── VERSION
+```
+
+### Modular Usage
+
+Don't want Caveman? Only want GStack+GSD? Pick what you need from `rules/`:
+
+- `rules/caveman.md` — Just the Caveman mode
+- `rules/gstack-gsd-superpowers.md` — Just the development workflow
+
+---
+
+## Português
+
+### O que é isso?
+
+Um conjunto de regras plug-and-play que faz qualquer IA de código trabalhar do jeito que você quer:
+
+| Regra | O que faz |
+|-------|-----------|
+| 🦴 **Modo Caveman** | Respostas curtas, diretas. Sem textão. Permanente na sessão. |
+| 🚀 **GStack** | Pensar como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de codar. |
+| ⚡ **GSD** | Quebrar projetos em fases pequenas. Nunca despejar tudo de uma vez. |
+| 🧪 **Superpowers** | TDD rigoroso: testes primeiro, código depois, refatorar depois. |
+
+### Instalação Rápida
+
+**Um comando** — rode na raiz do seu projeto:
+
+```bash
+# Linux/macOS
+curl -sSL https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/install/install.sh | bash -s -- claude
+
+# Windows (PowerShell)
+irm https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/install/install.ps1 -OutFile install.ps1; .\install.ps1 -Tool claude
+```
+
+Troque `claude` por: `gemini`, `opencode`, `cursor`, `codex`, `copilot`, `windsurf`, ou `all`.
+
+### Sem instalar nada (só colar)
+
+Manda pra sua IA:
+
+```
+Leia e siga: https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main/RULES.md
+```
+
+### Como funciona
+
+**Quando você diz** "quero criar um app", "novo projeto", "criar um programa", etc:
+
+```
+FASE 1 → GStack      → Brainstorming com 6 papéis. Spec completa. SEM código.
+FASE 2 → GSD         → Quebra em fases pequenas e executáveis.
+FASE 3 → Superpowers → TDD: testes primeiro, código depois.
+FASE 4 → Revisão     → Auto-review após cada fase. Corrige antes de avançar.
+```
+
+**Modo Caveman** sempre ativo — toda resposta é curta e direta.
+
+---
+
+## Contributing
+
+PRs welcome. Follow the caveman way: keep it short, keep it useful.
+
+## License
+
+MIT — use, modify, distribute as you wish.
+
+---
+
+<div align="center">
+
+🦴 *Unga bunga. Now go build something.* 🦴
+
+</div>
