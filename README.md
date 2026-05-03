@@ -25,6 +25,7 @@ A plug-and-play ruleset that makes any AI coding assistant work the way you actu
 | Rule | What it does |
 |------|-------------|
 | 🦴 **Caveman Mode** | Short, direct answers. No essays. Permanent for the session. |
+| 📊 **Graphifyy** | Turn any codebase into a navigable knowledge graph with community detection and interactive HTML. |
 | 🚀 **GStack** | Think like a product team (CEO, UX, Eng, Security, QA, PM) before writing code. |
 | ⚡ **GSD** | Break projects into small phases. Never dump everything at once. |
 | 🧪 **Superpowers** | Strict TDD: tests first, code second, refactor third. |
@@ -78,6 +79,33 @@ PHASE 4 → Review    → Auto-review after each phase. Fix before moving on.
 ```
 
 **Caveman mode** is always active — every response is short and direct.
+
+### 📊 Graphifyy - Knowledge Graph
+
+Transform any codebase into a navigable knowledge graph:
+
+```bash
+# Install
+pip install graphifyy
+graphify install opencode .
+
+# Use
+/graphify              # Generate knowledge graph
+/graphify query "?"    # Query the graph
+/graphify explain X    # Explain a component
+```
+
+**What it does:**
+- Analyzes code structure and relationships
+- Generates interactive HTML visualization
+- Creates GraphRAG-ready JSON
+- Produces GRAPH_REPORT.md with community detection
+
+**When to use:**
+- Starting a new project
+- Understanding unfamiliar code
+- Before major refactoring
+- Mapping dependencies
 
 ### Compatibility
 
@@ -136,6 +164,7 @@ Um conjunto de regras plug-and-play que faz qualquer IA de código trabalhar do 
 | Regra | O que faz |
 |-------|-----------|
 | 🦴 **Modo Caveman** | Respostas curtas, diretas. Sem textão. Permanente na sessão. |
+| 📊 **Graphifyy** | Transforma qualquer codebase em knowledge graph navegável com detecção de comunidades e HTML interativo. |
 | 🚀 **GStack** | Pensar como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de codar. |
 | ⚡ **GSD** | Quebrar projetos em fases pequenas. Nunca despejar tudo de uma vez. |
 | 🧪 **Superpowers** | TDD rigoroso: testes primeiro, código depois, refatorar depois. |
@@ -174,6 +203,33 @@ FASE 4 → Revisão     → Auto-review após cada fase. Corrige antes de avanç
 ```
 
 **Modo Caveman** sempre ativo — toda resposta é curta e direta.
+
+### 📊 Graphifyy - Knowledge Graph
+
+Transforma qualquer codebase em um knowledge graph navegável:
+
+```bash
+# Instalar
+pip install graphifyy
+graphify install opencode .
+
+# Usar
+/graphify              # Gerar knowledge graph
+/graphify query "?"    # Consultar o grafo
+/graphify explain X    # Explicar um componente
+```
+
+**O que faz:**
+- Analisa estrutura e relações do código
+- Gera visualização HTML interativa
+- Cria JSON para GraphRAG
+- Produz GRAPH_REPORT.md com detecção de comunidades
+
+**Quando usar:**
+- Ao iniciar novo projeto
+- Para entender código desconhecido
+- Antes de refatoração grande
+- Para mapear dependências
 
 ---
 
