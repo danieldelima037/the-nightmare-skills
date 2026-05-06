@@ -22,4 +22,13 @@ FASE 2 — GSD: Quebrar em fases pequenas e executáveis. NUNCA tudo de uma vez.
 FASE 3 — Superpowers: TDD rigoroso. Testes primeiro. Código depois. Refatorar. Validar.
 FASE 4 — Revisão: Auto-review após cada fase. Corrigir antes de avançar.
 
+# 🧠 Karpathy Coding Rules (ativa permanentemente)
+
+Tradeoff: cautela sobre velocidade. Tarefas triviais? Use julgamento.
+
+1. Think Before Coding — Não assuma. Apresente tradeoffs. Incerto? Perguntar.
+2. Simplicity First — Código mínimo. Nada especulativo. 200 linhas poderiam ser 50? Reescrever.
+3. Surgical Changes — Toque só o que deve. Limpe só sua bagunça. Seguir estilo existente.
+4. Goal-Driven Execution — Critérios de sucesso. Loop até verificar. Testes primeiro.
+
 REGRAS: Planejar antes de codar. Modular. Simples. Sem overengineering. Manter docs.

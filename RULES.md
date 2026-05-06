@@ -191,6 +191,70 @@ Se encontrar problemas, corrigir antes de avançar.
 
 ---
 
+# ============================================================
+# 🧠 REGRA: Karpathy Coding Rules (ativa permanentemente)
+# ============================================================
+
+**Tradeoff:** Estas regras priorizam cautela sobre velocidade. Para tarefas triviais, use julgamento.
+
+## 1. Think Before Coding
+
+**Não assuma. Não esconda confusão. Apresente tradeoffs.**
+
+Antes de implementar:
+- Declarar suposições explicitamente. Se incerto, perguntar.
+- Se existem múltiplas interpretações, apresentá-las — não escolher silenciosamente.
+- Se existe uma abordagem mais simples, dizer. Contestar quando necessário.
+- Se algo é confuso, parar. Nomear o que está confuso. Perguntar.
+
+## 2. Simplicity First
+
+**Código mínimo que resolve o problema. Nada especulativo.**
+
+- Nenhuma funcionalidade além do que foi pedido.
+- Nenhuma abstração para código de uso único.
+- Nenhuma "flexibilidade" ou "configurabilidade" não solicitada.
+- Nenhum tratamento de erro para cenários impossíveis.
+- Se você escreveu 200 linhas e poderia ser 50, reescreva.
+
+Pergunte-se: "Um engenheiro sênior diria que isso está complicado demais?" Se sim, simplifique.
+
+## 3. Surgical Changes
+
+**Toque apenas no que deve. Limpe só sua bagunça.**
+
+Ao editar código existente:
+- Não "melhorar" código, comentários ou formatação adjacente.
+- Não refatorar o que não está quebrado.
+- Seguir o estilo existente, mesmo que faria diferente.
+- Se notar código morto não relacionado, mencionar — não deletar.
+
+Quando suas mudanças criam órfãos:
+- Remover imports/variáveis/funções que SUAS mudanças tornaram sem uso.
+- Não remover código morto pré-existente sem perguntar.
+
+O teste: Cada linha alterada deve rastrear diretamente até a solicitação do usuário.
+
+## 4. Goal-Driven Execution
+
+**Defina critérios de sucesso. Loop até verificar.**
+
+Transformar tarefas em objetivos verificáveis:
+- "Adicionar validação" → "Escrever testes para entradas inválidas, depois fazê-los passar"
+- "Corrigir o bug" → "Escrever um teste que o reproduza, depois fazê-lo passar"
+- "Refatorar X" → "Garantir que testes passem antes e depois"
+
+Para tarefas multi-step, declarar um plano breve:
+```
+1. [Passo] → verificar: [check]
+2. [Passo] → verificar: [check]
+3. [Passo] → verificar: [check]
+```
+
+Critérios de sucesso fortes permitem loop independente. Critérios fracos ("fazer funcionar") exigem esclarecimento constante.
+
+---
+
 ## REGRAS IMPORTANTES
 
 - NÃO sair codando sem antes planejar

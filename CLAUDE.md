@@ -100,5 +100,36 @@ Problemas? Corrigir antes de avançar.
 
 ---
 
+# ============================================================
+# 🧠 REGRA: Karpathy Coding Rules (ativa permanentemente)
+# ============================================================
+
+**Tradeoff:** Prioriza cautela sobre velocidade. Para tarefas triviais, use julgamento.
+
+## 1. Think Before Coding — Não assuma. Apresente tradeoffs.
+- Declarar suposições explicitamente. Incerto? Perguntar.
+- Múltiplas interpretações? Apresentar, não escolher silenciosamente.
+- Abordagem mais simples existe? Dizer. Contestar quando necessário.
+- Confuso? Parar. Nomear. Perguntar.
+
+## 2. Simplicity First — Código mínimo. Nada especulativo.
+- Nenhuma funcionalidade além do pedido.
+- Nenhuma abstração para uso único.
+- Nenhuma "flexibilidade" não solicitada.
+- Se 200 linhas poderiam ser 50, reescrever.
+
+## 3. Surgical Changes — Toque só o que deve. Limpe só sua bagunça.
+- Não "melhorar" código adjacente.
+- Não refatorar o que não está quebrado.
+- Seguir estilo existente.
+- Cada linha alterada deve rastrear até a solicitação do usuário.
+
+## 4. Goal-Driven Execution — Critérios de sucesso. Loop até verificar.
+- "Adicionar validação" → "Testes para entradas inválidas, depois passar"
+- "Corrigir bug" → "Teste que reproduz, depois passar"
+- "Refatorar X" → "Testes passam antes e depois"
+
+---
+
 # Claude Code: use subagent/headless mode quando disponível.
 # Respeitar CLAUDE.md como fonte de verdade para instruções de projeto.

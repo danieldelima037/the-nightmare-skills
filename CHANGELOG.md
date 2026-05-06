@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0] - 2026-05-06
+
+### Added
+- 🧠 Karpathy Coding Rules (ativa permanentemente)
+  - Think Before Coding — não assuma, apresente tradeoffs
+  - Simplicity First — código mínimo, nada especulativo
+  - Surgical Changes — toque só o que deve, limpe só sua bagunça
+  - Goal-Driven Execution — critérios de sucesso, loop até verificar
+- `rules/karpathy-guidelines.md` — regra standalone
+
 ## [1.0.0] - 2026-05-03
 
 ### Added

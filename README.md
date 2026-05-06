@@ -5,7 +5,7 @@
 **Development rules for AI coding assistants.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/danieldelima037/the-nightmare-skills/releases)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/danieldelima037/the-nightmare-skills/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/danieldelima037/the-nightmare-skills/pulls)
 
 *Stop your AI from writing 2000 lines of untested spaghetti code.*
@@ -26,6 +26,7 @@ A plug-and-play ruleset that makes any AI coding assistant work the way you actu
 |------|-------------|
 | 🦴 **Caveman Mode** | Short, direct answers. No essays. Permanent for the session. |
 | 📊 **Graphifyy** | Turn any codebase into a navigable knowledge graph with community detection and interactive HTML. |
+| 🧠 **Karpathy Rules** | Think before coding. Simplicity first. Surgical changes. Goal-driven execution. |
 | 🚀 **GStack** | Think like a product team (CEO, UX, Eng, Security, QA, PM) before writing code. |
 | ⚡ **GSD** | Break projects into small phases. Never dump everything at once. |
 | 🧪 **Superpowers** | Strict TDD: tests first, code second, refactor third. |
@@ -135,6 +136,7 @@ the-nightmare-skills/
 ├── copilot-instructions.md     # GitHub Copilot
 ├── rules/
 │   ├── caveman.md              # 🦴 Caveman rules (standalone)
+│   ├── karpathy-guidelines.md  # 🧠 Karpathy coding rules (standalone)
 │   └── gstack-gsd-superpowers.md # 🚀 Full workflow (standalone)
 ├── examples/
 │   └── before-after.md         # Before vs after comparison
@@ -151,6 +153,7 @@ the-nightmare-skills/
 Don't want Caveman? Only want GStack+GSD? Pick what you need from `rules/`:
 
 - `rules/caveman.md` — Just the Caveman mode
+- `rules/karpathy-guidelines.md` — Just the Karpathy coding rules
 - `rules/gstack-gsd-superpowers.md` — Just the development workflow
 
 ---
@@ -165,6 +168,7 @@ Um conjunto de regras plug-and-play que faz qualquer IA de código trabalhar do 
 |-------|-----------|
 | 🦴 **Modo Caveman** | Respostas curtas, diretas. Sem textão. Permanente na sessão. |
 | 📊 **Graphifyy** | Transforma qualquer codebase em knowledge graph navegável com detecção de comunidades e HTML interativo. |
+| 🧠 **Regras Karpathy** | Pensar antes de codar. Simplicidade primeiro. Mudanças cirúrgicas. Execução orientada por objetivos. |
 | 🚀 **GStack** | Pensar como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de codar. |
 | ⚡ **GSD** | Quebrar projetos em fases pequenas. Nunca despejar tudo de uma vez. |
 | 🧪 **Superpowers** | TDD rigoroso: testes primeiro, código depois, refatorar depois. |
