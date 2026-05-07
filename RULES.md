@@ -1,3 +1,0 @@
-# RULES.md — The Nightmare Skills (Universal)
-(Mesmo conteúdo do CLAUDE.md adaptado para qualquer IA)
-...
