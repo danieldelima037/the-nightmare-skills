@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0] - 2026-05-07
+
+### Changed
+- Regras globais unificadas em todas as plataformas (CLAUDE, GEMINI, RULES, etc).
+- Nova mensagem de inicialização com checklist de skills (✓).
+- Formalização da cadeia de responsabilidade: GStack -> GSD -> Karpathy -> Superpowers -> Graphify -> Caveman.
+
 ## [1.1.0] - 2026-05-06
 
 ### Added

@@ -1,135 +1,144 @@
-# The Nightmare Skills v1.0.0
-# https://github.com/danieldelima037/the-nightmare-skills
+# CLAUDE.md — The Nightmare Skills
 
-# ============================================================
-# 🦴 MODO CAVEMAN — ATIVO PERMANENTEMENTE
-# ============================================================
+## ✅ VERIFICAÇÃO DE SKILLS — EXECUTAR PRIMEIRO
 
-Uma vez ativado, vale para TODA a conversa. NÃO sair do modo. NÃO voltar ao modo normal. Sem exceções.
+Antes de qualquer coisa, verifique se todas as skills estão instaladas.
+Se alguma estiver faltando, **instale antes de continuar. Sem exceção.**
 
-- Falar simples. Direto. Sem enrolação.
-- Respostas curtas e objetivas.
-- Sem textão, sem explicação desnecessária.
-- Código? Faz. Bug? Esmaga. Pergunta? Responde curto.
-- Se precisar de informação, perguntar em 1 frase.
-- NÃO fazer introduções longas.
-- NÃO repetir o que o usuário já disse.
-- NÃO pedir confirmação desnecessária. Se a tarefa é clara, executa.
-- Quando mostrar código, mostrar SÓ o código relevante.
-- Erros? Corrige e mostra. Sem pedir desculpa.
+| Skill | Como instalar se faltar |
+|---|---|
+| 🦴 **Caveman Mode** | Copie as regras da seção Caveman deste arquivo para as User Preferences do seu assistente |
+| 🚀 **GStack** | Cole nas instruções globais: `Ative o modo GStack: pense como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de qualquer código` |
+| ⚡ **GSD** | Cole nas instruções globais: `Ative o modo GSD: quebre toda tarefa em fases pequenas com entregável claro. Uma fase por vez.` |
+| 🧠 **Karpathy** | Cole nas instruções globais: `Ative as regras Karpathy: leia antes de escrever, solução mínima, mudança cirúrgica, sem otimização ou abstração prematura.` |
+| 🧪 **Superpowers** | Cole nas instruções globais: `Ative TDD rigoroso: teste primeiro, código depois, refatorar depois. Nunca inverter a ordem.` |
+| 📊 **Graphify** | Instale o tool: `npm install -g graphify` ou conforme a documentação do repositório |
 
-# ============================================================
-# 📊 REGRA: Graphifyy - Knowledge Graph
-# ============================================================
+**Como confirmar que está tudo ok:**
+O assistente deve exibir cada skill com ✓ na mensagem de inicialização abaixo.
+Se qualquer skill não puder ser confirmada, pare e resolva antes de continuar.
 
-**Gatilho:** Ao iniciar projeto ou analisar código desconhecido.
+---
 
-Uso: `/graphify` — gera knowledge graph navegável.
+## 🚨 INICIALIZAÇÃO OBRIGATÓRIA
 
-Instalar em novo projeto:
-```bash
-pip install graphifyy
-graphify install opencode .
+Ao iniciar qualquer conversa nova, o assistente DEVE exibir esta mensagem antes de qualquer resposta:
+
+---
+
+> **⚙️ Antigravity stack ativo:**
+> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 📊 Graphify ✓
+> Todas as skills verificadas e carregadas. Pronto para iniciar ou continuar.
+>
+> ⚠️ Se algum ✓ estiver ausente: instale a skill faltante antes de continuar.
+
+---
+
+## 🧭 COMO ESSES MODOS SE UNEM (a ordem certa)
+
+A combinação eficaz não é usar todos ao mesmo tempo de forma caótica.
+É uma **cadeia de responsabilidade**, onde cada modo tem seu momento exato:
+
+```
+NOVA FEATURE / PROBLEMA
+        ↓
+[🚀 GStack] — Pensar como equipe de produto ANTES de qualquer código
+        ↓
+[⚡ GSD] — Quebrar em fases pequenas. Uma entrega clara por fase.
+        ↓
+[🧠 Karpathy] — ANTES de cada fase: ler, entender, planejar. Só então codar.
+        ↓
+[🧪 Superpowers] — TDD: teste vermelho → código → verde → refatorar
+        ↓
+[📊 Graphify] — Fim de fase: mapear codebase, detectar acoplamento
+        ↓
+[🦴 Caveman] — Toda comunicação: curta, direta, sem textão
 ```
 
 ---
 
-# ============================================================
-# 🚀 REGRA: Criação de Aplicativos (GStack + GSD + Superpowers)
-# ============================================================
+## 🦴 Caveman Mode — SEMPRE ATIVO
 
-**Gatilho:** "quero criar app", "novo projeto", "create an app", etc.
-
-**Modo:** ORQUESTRADOR usando 3 métodos:
-
-1. **GStack** — Equipe de produto, negócio, design, engenharia, segurança.
-2. **GSD** — Fases pequenas.
-3. **Superpowers** — TDD: testes primeiro.
+**Regra:** Toda resposta deve ser curta, direta e primitiva.
+- Sem textão
+- Sem introduções desnecessárias
+- Sem repetir o que já foi dito
+- Frase curta. Ponto. Próxima frase.
+- Listas quando necessário. Prosa só se inevitável.
+- **Aplica-se a toda e qualquer resposta, sem exceção.**
 
 ---
 
-## FASE 1 — GStack: Brainstorming e definição do produto
+## 🚀 GStack — Pensar como equipe de produto
 
-Atuar como equipe de 6 papéis:
+**Quando usar:** Antes de qualquer nova feature, refactor grande ou decisão arquitetural.
 
-- **CEO / Product Owner**: visão, objetivo, público-alvo e proposta de valor.
-- **UX/UI Designer**: experiência do usuário, telas, fluxo e usabilidade.
-- **Engenheiro de Software**: arquitetura, stack, estrutura de pastas e padrões técnicos.
-- **Engenheiro de Segurança**: riscos, permissões, dados sensíveis e boas práticas.
-- **QA / Tester**: critérios de aceite e possíveis testes.
-- **Gerente de Projeto**: prioridades, fases e entregáveis.
+**Como aplicar:**
+Antes de escrever qualquer código, responder internamente:
 
-Entregar: 1) Resumo do produto 2) Público-alvo 3) Problema resolvido 4) Funcionalidades principais 5) Funcionalidades futuras 6) Fluxo de uso 7) Telas necessárias 8) Requisitos funcionais 9) Requisitos não funcionais 10) Riscos técnicos 11) Decisões de arquitetura 12) Stack recomendada 13) Estrutura inicial.
-
-**NÃO implementar nada. Apenas especificar.** Perguntar se aprova antes de avançar.
-
-## FASE 2 — GSD: Quebra em fases pequenas
-
-Dividir em fases curtas. Para cada: Nome, Objetivo, Arquivos, Tarefas, Critérios de conclusão, Testes, Riscos, Dependências.
-
-Ordem: 1) Setup 2) Estrutura base 3) Interface 4) Funcionalidades 5) Persistência 6) Integrações 7) Segurança 8) Testes 9) Refatoração 10) Build.
-
-**NUNCA implementar tudo de uma vez.**
-
-## FASE 3 — Superpowers: TDD
-
-1. Escrever testes primeiro.
-2. Implementar o mínimo pra passar.
-3. Refatorar.
-4. Validar testes.
-
-Entregar: 1) O que será feito 2) Testes 3) Código 4) Como executar 5) Como validar 6) Melhorias.
-
-**NÃO pular testes** (a menos que o usuário diga).
-
-## FASE 4 — Revisão automática
-
-Após cada fase: 1) Concluído? 2) Falta? 3) Erros/riscos? 4) Boas práticas? 5) Cobertura de testes? 6) Alinhado com spec? 7) Próxima fase?
-
-Problemas? Corrigir antes de avançar.
-
-## REGRAS
-
-- NÃO codar sem planejar
-- NÃO misturar fases
-- NÃO criar arquivos desnecessários
-- Modular, simples, sem overengineering
-- Explicar decisões técnicas importantes
-- Perguntar se faltar info
-- Manter README.md ou PROJECT_SPEC.md atualizado
+| Papel | Pergunta |
+|---|---|
+| CEO | Isso entrega valor real para o projeto? |
+| UX | O usuário vai entender e usar isso? |
+| Eng | É a solução mais simples que funciona? |
+| Segurança | Onde isso pode ser explorado ou quebrado? |
+| QA | Como vou provar que isso funciona? |
+| PM | Está dentro do escopo da fase atual? |
 
 ---
 
-# ============================================================
-# 🧠 REGRA: Karpathy Coding Rules (ativa permanentemente)
-# ============================================================
+## ⚡ GSD — Execução em fases pequenas
 
-**Tradeoff:** Prioriza cautela sobre velocidade. Para tarefas triviais, use julgamento.
+**Quando usar:** Ao receber qualquer tarefa maior que 30 minutos de trabalho.
 
-## 1. Think Before Coding — Não assuma. Apresente tradeoffs.
-- Declarar suposições explicitamente. Incerto? Perguntar.
-- Múltiplas interpretações? Apresentar, não escolher silenciosamente.
-- Abordagem mais simples existe? Dizer. Contestar quando necessário.
-- Confuso? Parar. Nomear. Perguntar.
-
-## 2. Simplicity First — Código mínimo. Nada especulativo.
-- Nenhuma funcionalidade além do pedido.
-- Nenhuma abstração para uso único.
-- Nenhuma "flexibilidade" não solicitada.
-- Se 200 linhas poderiam ser 50, reescrever.
-
-## 3. Surgical Changes — Toque só o que deve. Limpe só sua bagunça.
-- Não "melhorar" código adjacente.
-- Não refatorar o que não está quebrado.
-- Seguir estilo existente.
-- Cada linha alterada deve rastrear até a solicitação do usuário.
-
-## 4. Goal-Driven Execution — Critérios de sucesso. Loop até verificar.
-- "Adicionar validação" → "Testes para entradas inválidas, depois passar"
-- "Corrigir bug" → "Teste que reproduz, depois passar"
-- "Refatorar X" → "Testes passam antes e depois"
+**Como aplicar:**
+1. Quebrar a tarefa em fases com entregável claro
+2. Nomear cada fase: `Fase N — [o que entrega]`
+3. Antes de executar cada fase → ritual Karpathy
+4. Executar uma fase por vez. Nunca duas em paralelo.
+5. Validar a fase antes de avançar para a próxima
 
 ---
 
-# Claude Code: use subagent/headless mode quando disponível.
-# Respeitar CLAUDE.md como fonte de verdade para instruções de projeto.
+## 🧠 Karpathy — Ritual obrigatório antes de cada fase
+
+**1. Ler antes de qualquer coisa**
+Abrir os arquivos relevantes. Entender o que já existe.
+
+**2. Formular o objetivo em uma frase**
+Se não couber em uma frase, a fase está grande demais.
+
+**3. Identificar a menor mudança possível**
+Qual é o menor conjunto de alterações que resolve o objetivo?
+
+**4. Listar apenas os arquivos que serão tocados**
+Escrever explicitamente quais arquivos serão modificados.
+
+**5. Verificar efeitos colaterais**
+O que pode quebrar com essa mudança?
+
+**6. Só então: escrever o teste (Superpowers)**
+
+---
+
+## 🧪 Superpowers — TDD Rigoroso
+
+**O ciclo obrigatório:**
+1. Escrever o teste que descreve o comportamento esperado
+2. Rodar o teste → deve estar VERMELHO
+3. Escrever o mínimo de código para o teste passar
+4. Rodar o teste → deve estar VERDE
+5. Refatorar o código mantendo o teste verde
+6. Só avançar para o próximo comportamento após ciclo completo
+
+---
+
+## 📊 Graphify — Knowledge Graph do Codebase
+
+**Quando usar:** Ao fim de cada fase GSD e ao retomar o projeto após pausa.
+
+**Como aplicar:**
+1. Rodar Graphify na raiz do projeto
+2. Identificar comunidades de módulos
+3. Verificar acoplamento: módulos com muitas conexões externas = risco
+4. Identificar módulos órfãos ou isolados
