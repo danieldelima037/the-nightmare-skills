@@ -1,51 +1,76 @@
-# Exemplos: Antes vs Depois
+# 🦴 Exemplos: Antes vs Depois (The Nightmare Skills)
 
-## ❌ SEM Nightmare Skills (IA padrão)
-
-**Usuário:** "cria um app de tarefas"
-
-**IA responde:**
-> Claro! Vou ajudá-lo a criar um aplicativo de tarefas. Antes de começarmos, gostaria de discutir algumas opções com você. Podemos usar diversas tecnologias como React, Vue, Angular para o frontend, e Node.js, Python, ou Go para o backend. Cada uma tem suas vantagens e desvantagens que eu gostaria de explorar com você...
->
-> [30 parágrafos de explicação]
->
-> Vou começar criando todos os arquivos:
-> [despeja 2000 linhas de código de uma vez]
-
-**Resultado:** Código gigante, sem testes, sem spec, difícil de manter.
+Este documento demonstra a diferença brutal entre uma IA padrão e uma IA operando com o **Antigravity Stack**.
 
 ---
 
-## ✅ COM Nightmare Skills
+## 1. Criando um Novo Projeto
 
+### ❌ SEM Nightmare Skills (IA Padrão)
 **Usuário:** "cria um app de tarefas"
 
 **IA responde:**
-> 🚀 **FASE 1 — GStack ativado.**
->
-> **Resumo:** App de tarefas. CRUD + status + prioridade.
->
-> **Público:** Devs que querem algo simples e rápido.
->
-> **Stack:** React + SQLite + Vite.
->
-> **Telas:** 1) Lista 2) Criar/Editar 3) Config.
->
-> [spec objetiva de 13 pontos]
->
-> Aprova? Ou quer ajustar algo?
+> "Com certeza! Vou ajudá-lo com seu aplicativo. Podemos usar React com Tailwind ou quem sabe um backend em Node.js com Prisma. Existem muitas opções. Vou começar criando o repositório e instalando as dependências. Deixe-me explicar cada decisão técnica primeiro..."
+> 
+> [30 parágrafos de explicação teórica]
+> 
+> "Aqui está o código completo de todos os arquivos:"
+> [Despeja 15 arquivos de uma vez sem testes ou especificações]
 
-**Resultado:** Spec primeiro. Código por fases. Testes antes. Tudo organizado.
+**Resultado:** Código inflado, sem documentação de requisitos, alta chance de bugs e perda de contexto.
+
+### ✅ COM Antigravity Stack
+**Usuário:** "cria um app de tarefas"
+
+**IA responde:**
+> **⚙️ Antigravity stack ativo:**
+> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 📊 Graphify ✓
+>
+> 🚀 **GStack (Equipe de Produto):**
+> - **CEO:** Foco em produtividade minimalista.
+> - **Eng:** React + Vite + LocalStorage (Solução Mínima).
+> - **QA:** Testes de persistência e edição.
+>
+> ⚡ **GSD (Roadmap):**
+> 1. Setup + Design System (Base)
+> 2. CRUD Core (Lógica)
+> 3. Filtros e Estados (Refactor)
+>
+> [Spec objetiva enviada para aprovação]
+
+**Resultado:** Planejamento profissional. Implementação por fases. Zero desperdício de tokens.
 
 ---
 
-## 🦴 Modo Caveman em ação
+## 2. Resolvendo um Bug
 
-**Sem Caveman:**
-> "Obrigado por compartilhar esse erro comigo! Vejo que o problema parece estar relacionado à importação do módulo X. Existem várias possíveis causas para esse tipo de erro, incluindo problemas de PATH, versão do Python, ou dependências faltando. Vou analisar detalhadamente cada possibilidade..."
+### ❌ SEM Nightmare Skills
+**IA responde:**
+> "Sinto muito que você esteja enfrentando esse erro. O erro `ModuleNotFoundError` geralmente ocorre quando uma biblioteca não está instalada no ambiente atual. Você deve verificar seu virtualenv e garantir que as dependências estejam no requirements.txt. Você tentou rodar o pip install?"
 
-**Com Caveman:**
-> Falta `pip install requests`. Roda isso:
-> ```
-> pip install requests
-> ```
+### ✅ COM Karpathy Rules + Caveman
+**IA responde:**
+> 🧠 **Karpathy Ritual:** Li os logs. Falta `requests` no `venv`.
+> 🦴 **Caveman:** Roda: `pip install requests`
+
+**Resultado:** Diagnóstico cirúrgico. Ação imediata.
+
+---
+
+## 3. Manutenção de Código Existente
+
+### ❌ SEM Nightmare Skills
+**Usuário:** "Adiciona um campo de data na tarefa"
+
+**IA responde:**
+> [Reescreve 3 arquivos inteiros, muda a formatação de funções não relacionadas, remove comentários e altera a estrutura do banco de dados sem perguntar.]
+
+### ✅ COM Karpathy Rules (Mudança Cirúrgica)
+**IA responde:**
+> 🧠 **Karpathy Ritual:** Mudança cirúrgica.
+> 1. Modificar `TaskSchema` (+1 campo).
+> 2. Atualizar `TaskInput.tsx` (+1 input).
+> 🧪 **Superpowers:** Teste adicionado para validar data.
+> 📊 **Graphify:** Nenhuma quebra de acoplamento detectada.
+
+**Resultado:** Alteração precisa. Sem efeitos colaterais. Codebase limpa.
