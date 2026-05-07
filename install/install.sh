@@ -9,7 +9,7 @@
 set -e
 
 REPO="https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills/main"
-TOOL="${1:-all}"
+TOOL="${1:-claude}"
 
 echo "🦴 The Nightmare Skills - Installing for: $TOOL"
 echo ""
@@ -25,42 +25,25 @@ case "$TOOL" in
     claude)
         install_file "$REPO/CLAUDE.md" "./CLAUDE.md"
         ;;
-    gemini)
-        install_file "$REPO/GEMINI.md" "./GEMINI.md"
-        ;;
-    gemini-global)
-        mkdir -p ~/.gemini
-        install_file "$REPO/GEMINI.md" "$HOME/.gemini/GEMINI.md"
-        ;;
-    opencode)
-        install_file "$REPO/OPENCODE.md" "./OPENCODE.md"
-        ;;
     cursor)
         install_file "$REPO/.cursorrules" "./.cursorrules"
-        ;;
-    codex)
-        install_file "$REPO/AGENTS.md" "./AGENTS.md"
-        ;;
-    copilot)
-        mkdir -p .github
-        install_file "$REPO/copilot-instructions.md" "./.github/copilot-instructions.md"
         ;;
     windsurf)
         install_file "$REPO/.windsurfrules" "./.windsurfrules"
         ;;
+    global)
+        mkdir -p ~/.antigravity
+        install_file "$REPO/CLAUDE.md" "$HOME/.antigravity/CLAUDE.md"
+        echo "  Note: Global rules installed in ~/.antigravity/CLAUDE.md"
+        ;;
     all)
         install_file "$REPO/CLAUDE.md" "./CLAUDE.md"
-        install_file "$REPO/GEMINI.md" "./GEMINI.md"
-        install_file "$REPO/OPENCODE.md" "./OPENCODE.md"
         install_file "$REPO/.cursorrules" "./.cursorrules"
-        install_file "$REPO/AGENTS.md" "./AGENTS.md"
         install_file "$REPO/.windsurfrules" "./.windsurfrules"
-        mkdir -p .github
-        install_file "$REPO/copilot-instructions.md" "./.github/copilot-instructions.md"
         ;;
     *)
         echo "❌ Tool not recognized: $TOOL"
-        echo "Available: claude, gemini, gemini-global, opencode, cursor, codex, copilot, windsurf, all"
+        echo "Available: claude, cursor, windsurf, global, all"
         exit 1
         ;;
 esac
