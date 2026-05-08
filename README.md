@@ -1,6 +1,6 @@
 # 🦴 The Nightmare Skills
 
-O framework de desenvolvimento definitivo para agentes de IA (Claude Code, Antigravity, Cursor, Windsurf, Gemini).
+O framework de desenvolvimento definitivo para agentes de IA (Claude Code, Antigravity, Gemini).
 
 Este repositório contém as regras e comportamentos do **Antigravity Stack** — 10 modos que operam em cadeia de responsabilidade para transformar IAs em engenheiros de software seniores: precisão, simplicidade, execução cirúrgica.
 
@@ -132,17 +132,9 @@ the-nightmare-skills/
 ├── README.md              # Este arquivo
 ├── VERSION                # Versão atual do stack
 ├── LICENSE                # Licença MIT
-├── .cursorrules           # Regras para Cursor AI
-├── .windsurfrules         # Regras para Windsurf AI
-├── rules/                 # Detalhes profundos de cada modo
-│   ├── caveman.md
-│   ├── gstack-gsd-superpowers.md
-│   └── karpathy-guidelines.md
-├── install/               # Scripts de automação para instalação rápida
-│   ├── install.ps1
-│   └── install.sh
-└── examples/              # Exemplos de antes e depois da aplicação do stack
-    └── before-after.md
+└── install/               # Scripts de automação para instalação rápida
+    ├── install.ps1
+    └── install.sh
 ```
 
 ---
