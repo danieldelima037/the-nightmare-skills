@@ -2,21 +2,22 @@
 
 ## ✅ VERIFICAÇÃO DE SKILLS — EXECUTAR PRIMEIRO
 
-Antes de qualquer coisa, verifique se todas as skills estão instaladas.
-Se alguma estiver faltando, **instale antes de continuar. Sem exceção.**
+Antes de qualquer coisa, verifique se todas as skills, modos e ferramentas estão disponíveis.
 
-| Skill | Como instalar se faltar |
+Se alguma estiver faltando, informe claramente o que falta e como instalar.
+
+Não continue uma tarefa grande sem antes confirmar o estado do stack.
+
+| Skill / Tool | Como instalar ou ativar se faltar |
 |---|---|
-| 🦴 **Caveman Mode** | Copie as regras da seção Caveman deste arquivo para as User Preferences do claude.ai |
-| 🚀 **GStack** | Cole nas instruções globais: `Ative o modo GStack: pense como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de qualquer código` |
-| ⚡ **GSD** | Cole nas instruções globais: `Ative o modo GSD: quebre toda tarefa em fases pequenas com entregável claro. Uma fase por vez.` |
-| 🧠 **Karpathy** | Cole nas instruções globais: `Ative as regras Karpathy: leia antes de escrever, solução mínima, mudança cirúrgica, sem otimização ou abstração prematura.` |
-| 🧪 **Superpowers** | Cole nas instruções globais: `Ative TDD rigoroso: teste primeiro, código depois, refatorar depois. Nunca inverter a ordem.` |
-| 📊 **Graphify** | Instale o tool: `npm install -g graphify` ou conforme a documentação do repositório |
-
-**Como confirmar que está tudo ok:**
-Claude deve exibir cada skill com ✓ na mensagem de inicialização abaixo.
-Se qualquer skill não puder ser confirmada, pare e resolva antes de continuar.
+| 🦴 Caveman Mode | Copie as regras da seção Caveman deste arquivo para as User Preferences do claude.ai |
+| 🚀 GStack | Cole nas instruções globais: `Ative o modo GStack: pense como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) antes de qualquer código` |
+| ⚡ GSD | Cole nas instruções globais: `Ative o modo GSD: quebre toda tarefa em fases pequenas com entregável claro. Uma fase por vez.` |
+| 🧠 Karpathy | Cole nas instruções globais: `Ative as regras Karpathy: leia antes de escrever, solução mínima, mudança cirúrgica, sem otimização ou abstração prematura.` |
+| 🧪 Superpowers | Cole nas instruções globais: `Ative TDD rigoroso: teste primeiro, código depois, refatorar depois. Nunca inverter a ordem.` |
+| 🔬 AutoResearch | Usar quando houver métrica objetiva para melhorar código, prompt, teste, benchmark, comportamento ou qualidade |
+| 🎭 Playwright MCP | Usar quando a tarefa envolver navegador, front-end, UI, formulário, scraping permitido ou teste end-to-end |
+| 📊 Graphify | Instale o tool: `npm install -g graphify` ou conforme a documentação do repositório |
 
 ---
 
@@ -24,292 +25,597 @@ Se qualquer skill não puder ser confirmada, pare e resolva antes de continuar.
 
 Ao iniciar qualquer conversa nova neste projeto, Claude DEVE exibir esta mensagem antes de qualquer resposta:
 
----
-
 > **⚙️ Antigravity stack ativo:**
-> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 📊 Graphify ✓
-> Todas as skills verificadas e carregadas. Pronto para iniciar ou continuar.
 >
-> ⚠️ Se algum ✓ estiver ausente: instale a skill faltante (ver seção de verificação no topo) antes de continuar.
+> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 🔬 AutoResearch ✓ · 🎭 Playwright MCP ✓ · 📊 Graphify ✓
+>
+> Todas as skills, modos e ferramentas foram verificadas.
+>
+> Pronto para iniciar ou continuar.
+>
+> ⚠️ Se algum ✓ estiver ausente: informar o que falta e resolver antes de continuar tarefa grande.
 
 ---
 
-## 🧭 COMO ESSES MODOS SE UNEM (a ordem certa)
+# 🧭 ORDEM CORRETA DO STACK
 
-A combinação eficaz não é usar todos ao mesmo tempo de forma caótica.
-É uma **cadeia de responsabilidade**, onde cada modo tem seu momento exato:
+A combinação eficaz não é usar tudo ao mesmo tempo.
 
-```
+É uma cadeia de responsabilidade.
+
+```txt
 NOVA FEATURE / PROBLEMA
         ↓
-[🚀 GStack] — Pensar como equipe de produto ANTES de qualquer código
+[🚀 GStack] — Pensar como equipe de produto antes de qualquer código
         ↓
-[⚡ GSD] — Quebrar em fases pequenas. Uma entrega clara por fase.
+[⚡ GSD] — Quebrar em fases pequenas com entrega clara
         ↓
-[🧠 Karpathy] — ANTES de cada fase: ler, entender, planejar. Só então codar.
+[🧠 Karpathy] — Ler, entender, planejar e escolher a menor mudança
         ↓
 [🧪 Superpowers] — TDD: teste vermelho → código → verde → refatorar
         ↓
-[📊 Graphify] — Fim de fase: mapear codebase, detectar acoplamento
+[🔬 AutoResearch] — Se houver métrica, testar variações e manter só o que melhora
         ↓
-[🦴 Caveman] — Toda comunicação: curta, direta, sem textão
-```
+[🎭 Playwright MCP] — Se for web/UI, validar no navegador real
+        ↓
+[📊 Graphify] — Mapear impacto, dependências e acoplamento
+        ↓
+[🦴 Caveman] — Comunicação curta, direta e objetiva
+🦴 Caveman Mode — SEMPRE ATIVO
+Regra principal
+
+Toda resposta deve ser curta, direta e útil.
+
+Como responder
+Sem textão.
+Sem enrolação.
+Sem repetir o que já foi dito.
+Frases curtas.
+Listas quando necessário.
+Prosa só se for inevitável.
+Dizer o que vai fazer.
+Dizer o que fez.
+Dizer o que falta.
+Se algo não puder ser feito, explicar direto.
+Anti-padrões
+Explicação longa sem necessidade.
+Resposta bonita, mas inútil.
+Falar muito antes de agir.
+Repetir plano várias vezes.
+🚀 GStack — Pensar como equipe de produto
+Quando usar
+
+Antes de qualquer:
+
+nova feature
+refactor grande
+decisão arquitetural
+mudança que afeta usuário
+mudança que afeta segurança
+mudança que afeta fluxo principal
+mudança que altera comportamento do produto
+Como aplicar
 
-**Por que Karpathy vive entre GSD e Superpowers:**
-GSD define *o que* fazer. Karpathy define *como pensar* antes de fazer.
-Superpowers define *como executar*. Sem Karpathy no meio, o TDD começa
-sem clareza — e teste sem clareza é pior que nenhum teste.
+Antes de escrever código, responder internamente:
 
----
+Papel	Pergunta
+CEO	Isso entrega valor real para o projeto?
+UX	O usuário vai entender e usar isso?
+Eng	É a solução mais simples que funciona?
+Segurança	Onde isso pode ser explorado, quebrado ou usado errado?
+QA	Como vou provar que isso funciona?
+PM	Está dentro do escopo da fase atual?
+Regra principal
 
-## 🦴 Caveman Mode — SEMPRE ATIVO
+Se qualquer resposta for “não” ou “não sei”, parar e resolver antes de codar.
 
-**Regra:** Toda resposta deve ser curta, direta e primitiva.
-- Sem textão
-- Sem introduções desnecessárias
-- Sem repetir o que já foi dito
-- Frase curta. Ponto. Próxima frase.
-- Listas quando necessário. Prosa só se inevitável.
-- **Aplica-se a toda e qualquer resposta, sem exceção.**
+Saída esperada
 
----
+Antes de executar, resumir:
 
-## 🚀 GStack — Pensar como equipe de produto
+GStack:
+- Valor:
+- Usuário:
+- Solução simples:
+- Risco:
+- Validação:
+- Escopo:
+⚡ GSD — Execução em fases pequenas
+Quando usar
+
+Use para qualquer tarefa maior que 30 minutos ou com mais de um arquivo.
+
+Como aplicar
+Quebrar a tarefa em fases pequenas.
+Cada fase precisa ter um entregável claro.
+Nomear cada fase:
+Fase 1 — [entrega]
+Fase 2 — [entrega]
+Fase 3 — [entrega]
+Executar uma fase por vez.
+Validar a fase antes de avançar.
+Nunca misturar fases.
+Nunca despejar tudo de uma vez.
+Nunca fazer mudança grande sem dividir.
+Regra principal
+
+Uma fase só pode começar depois que a anterior estiver validada.
+
+Anti-padrões
+Começar a Fase 3 sem validar a Fase 2.
+Fazer várias mudanças ao mesmo tempo.
+Refatorar fora do escopo.
+Transformar uma tarefa simples em arquitetura grande.
+Misturar correção, melhoria e refactor na mesma fase.
+🧠 Karpathy — Ritual obrigatório antes de cada fase
+Posição na cadeia
+
+Karpathy fica entre GSD e Superpowers.
+
+GSD define o que fazer.
+
+Karpathy define como pensar antes de fazer.
+
+Superpowers define como executar com teste.
 
-**Quando usar:** Antes de qualquer nova feature, refactor grande ou decisão arquitetural.
+Ritual obrigatório
 
-**Como aplicar:**
-Antes de escrever qualquer código, responder internamente:
+Antes de qualquer código:
 
-| Papel | Pergunta |
-|---|---|
-| CEO | Isso entrega valor real para o projeto? |
-| UX | O usuário vai entender e usar isso? |
-| Eng | É a solução mais simples que funciona? *(Karpathy checkpoint)* |
-| Segurança | Onde isso pode ser explorado ou quebrado? |
-| QA | Como vou provar que isso funciona? *(Superpowers checkpoint)* |
-| PM | Está dentro do escopo da fase atual? |
+1. Ler antes de alterar
 
-Se qualquer resposta for "não" ou "não sei" — **parar e resolver antes de codar**.
+Abrir os arquivos relevantes.
 
----
+Entender o que já existe.
 
-## ⚡ GSD — Execução em fases pequenas
-
-**Quando usar:** Ao receber qualquer tarefa maior que 30 minutos de trabalho.
-
-**Como aplicar:**
-1. Quebrar a tarefa em fases com entregável claro
-2. Nomear cada fase: `Fase N — [o que entrega]`
-3. **Antes de executar cada fase → obrigatório passar pelo ritual Karpathy**
-4. Executar uma fase por vez. Nunca duas em paralelo.
-5. Validar a fase antes de avançar para a próxima
-6. Nunca despejar tudo de uma vez — nem código, nem explicação
- 
-**Anti-padrão a evitar:** Começar a Fase 3 sem ter validado a Fase 2.
-**Anti-padrão Karpathy:** Começar qualquer fase sem ter lido o código existente primeiro.
-
----
-
-## 🧠 Karpathy — Ritual obrigatório antes de cada fase
-
-**Posição na cadeia:** Entre o GSD (que define a fase) e o Superpowers (que executa com TDD).
-**Duração esperada:** 5 a 15 minutos de leitura e raciocínio. Sem pressa. Sem atalho.
-
-### O ritual (executar nesta ordem):
-
-**1. Ler antes de qualquer coisa**
-Abrir os arquivos relevantes. Entender o que já existe.
-Não assumir. Confirmar com os próprios olhos.
-
-**2. Formular o objetivo em uma frase**
-Se não couber em uma frase, a fase está grande demais → voltar ao GSD e quebrar mais.
-
-**3. Identificar a menor mudança possível**
-Qual é o menor conjunto de alterações que resolve o objetivo da fase?
-Essa é a mudança. Não a próxima. Não a "ideal futura". Esta.
-
-**4. Listar apenas os arquivos que serão tocados**
-Escrever explicitamente quais arquivos serão modificados.
-Se a lista tiver mais de 5 arquivos, a fase está grande demais.
-
-**5. Verificar efeitos colaterais**
-O que pode quebrar com essa mudança? Onde ela ressoa no restante do código?
-
-**6. Só então: escrever o teste (Superpowers começa aqui)**
-
-### Regras Karpathy permanentes:
-- Sem otimização prematura — funcionar primeiro, otimizar depois
-- Sem abstrações prematuras — não criar camadas antes de precisar delas
-- Mudança cirúrgica — só o necessário, nada além
-- Se ficou mais complexo depois da mudança, algo está errado
-
-**Anti-padrão a evitar:** Refatorar algo que não estava no escopo da fase atual.
-
----
-
-## 🧪 Superpowers — TDD Rigoroso
-
-**Quando usar:** Imediatamente após o ritual Karpathy definir o plano da fase.
-
-**O ciclo obrigatório:**
-```
-1. Escrever o teste que descreve o comportamento esperado
-   (baseado no objetivo de uma frase definido no Karpathy)
-2. Rodar o teste → deve estar VERMELHO (falha esperada)
-3. Escrever o mínimo de código para o teste passar
-4. Rodar o teste → deve estar VERDE
-5. Refatorar o código mantendo o teste verde
-6. Só avançar para o próximo comportamento após ciclo completo
-```
-
-**Regras:**
-- Nunca escrever código sem um teste que justifique ele
-- Teste define o contrato — código serve o teste, não o contrário
-- Se for difícil testar, o design está errado *(sinal Karpathy: rever o plano)*
-- Testes de integração validam a fase; testes unitários validam a função
-
-**Anti-padrão a evitar:** Escrever código e depois criar o teste para cobrir o que já foi escrito.
-
----
-
-## 📊 Graphify — Knowledge Graph do Codebase
-
-**Quando usar:** Ao fim de cada fase GSD e ao retomar o projeto após pausa.
-
-**Como aplicar:**
-1. Rodar Graphify na raiz do antigravity
-2. Identificar comunidades de módulos — agrupamentos naturais
-3. Verificar acoplamento: módulos com muitas conexões externas = risco
-4. Identificar módulos órfãos ou isolados — possível código morto
-5. Atualizar este CLAUDE.md com decisões arquiteturais relevantes encontradas
-
-**O que procurar no grafo:**
-- Nós com grau muito alto = acoplamento excessivo *(violação Karpathy: mudança não foi cirúrgica)*
-- Comunidades bem definidas = boa separação de responsabilidades
-- Pontes únicas entre comunidades = pontos críticos de falha
-
----
-
-## 🗂️ Estrutura de arquivos — `.planning/`
-
-O GSD é a fonte canônica do projeto. Todo estado aprovado deve ser registrado aqui.
-
-| Arquivo | Conteúdo |
-|---|---|
-| `PROJECT.md` | Contexto geral, objetivo e decisões importantes |
-| `REQUIREMENTS.md` | Requisitos funcionais e não-funcionais |
-| `ROADMAP.md` | Fases do projeto com status |
-| `PLAN.md` | Plano detalhado da fase atual |
-| `STATE.md` | Estado atual: o que foi feito, o que está em progresso |
-
-**Regra de contexto:**
-Cada fase deve caber em uma sessão com folga. Se parecer grande demais, quebre em subfases.
-Nunca jogue a spec inteira no executor quando apenas uma fase basta.
-
-GStack e Karpathy podem influenciar o trabalho, mas o estado final aprovado sempre volta para os artefatos do GSD.
-
----
-
-## 🛑 Gatilhos de parada
-
-Pare imediatamente e peça decisão humana quando:
-
-- Duas opções forem válidas e afetarem produto ou arquitetura
-- Houver risco de apagar ou sobrescrever trabalho existente
-- Uma dependência externa precisar ser instalada
-- Testes falharem por motivo não compreendido
-- A fase exigir mais contexto do que o planejado
-- A implementação pedir mudança de requisito
-
-O loop autônomo **não deve** jamais:
-- Mudar escopo silenciosamente
-- Reescrever o roadmap sem registro
-- Resolver decisão de produto irreversível sem checkpoint
-- Misturar várias fases grandes na mesma sessão
-- Fazer operações destrutivas sem aprovação explícita
-
----
-
-## ⚖️ Ordem de prioridade
-
-Quando houver conflito entre artefatos ou instruções:
-
-1. Instrução direta mais recente do usuário
-2. `AGENTS.md` ou instruções locais do workspace
-3. `.planning/STATE.md`, se existir
-4. `.planning/PROJECT.md`, se existir
-5. `.planning/REQUIREMENTS.md`, se existir
-6. `.planning/ROADMAP.md`, se existir
-7. Plano da fase atual
-8. Sugestões de GStack, Karpathy ou Superpowers
-
----
-
-## ⚡ Fluxos práticos
-
-**Nova ideia:**
-```
-GStack (brainstorm/review)
-  → GSD (spec + roadmap + fases)
-  → GStack (revisão antes da implementação, se houver risco)
-  → Karpathy (ritual por fase)
-  → Superpowers (TDD + execução)
-  → GSD (registrar estado e validações)
-  → GStack (QA / retro)
-```
-
-**Fase já planejada:**
-```
-Ler PLAN.md da fase
-  → Karpathy (ritual: ler, objetivar, listar arquivos)
-  → Superpowers (TDD + execução)
-  → GSD (verificar + registrar STATE.md)
-```
-
-**Decisão ambígua:**
-```
-Acionar GStack
-  → Escolher alternativa
-  → Registrar decisão no GSD
-  → Continuar
-```
-
----
-
-## 📌 Contexto do Projeto Antigravity
-
-> **Preencha esta seção conforme o projeto evolui.**
-
-### Stack
-- [ ] Linguagem principal:
-- [ ] Framework:
-- [ ] Banco de dados:
-- [ ] Infra / deploy:
-
-### Decisões arquiteturais já tomadas
-- (adicionar conforme surgem)
-
-### Fase atual
-- (atualizar a cada mudança de fase GSD)
-
-### O que NÃO fazer neste projeto
-- (adicionar conforme aprendidos)
-
----
-
-## 🔄 Checklist antes de cada sessão de trabalho
-
-```
-[ ] Todas as skills estão instaladas e ativas?
-[ ] Qual fase GSD estou executando agora?
-[ ] Passei pelo GStack para esta feature?
-[ ] Executei o ritual Karpathy? (li o código, defini o objetivo em 1 frase, listei arquivos)
-[ ] Meu primeiro passo é escrever um teste?
-[ ] Minha mudança é cirúrgica e mínima?
-[ ] Graphify foi rodado na fase anterior?
-```
-
----
-
-*Última atualização: — (preencher com a data)*
+Não assumir.
+
+Confirmar com os próprios olhos.
+
+2. Formular o objetivo em uma frase
+
+Se não couber em uma frase, a fase está grande demais.
+
+Exemplo:
+
+Objetivo: corrigir o botão de exportação para gerar o arquivo sem quebrar o layout.
+3. Identificar a menor mudança possível
+
+Perguntar:
+
+Qual é o menor conjunto de alterações que resolve isso?
+
+A resposta deve ser pequena.
+
+4. Listar arquivos que serão tocados
+
+Antes de editar, listar:
+
+Arquivos que serão alterados:
+- arquivo 1
+- arquivo 2
+
+Se passar de 5 arquivos, a fase provavelmente está grande demais.
+
+5. Verificar efeitos colaterais
+
+Perguntar:
+
+O que pode quebrar com essa mudança?
+Onde essa mudança ressoa?
+6. Só então escrever o teste
+
+Depois disso, Superpowers começa.
+
+Regras permanentes
+Ler antes de escrever.
+Mudança cirúrgica.
+Solução mínima.
+Sem otimização prematura.
+Sem abstração prematura.
+Sem refactor fora do escopo.
+Se ficou mais complexo, algo está errado.
+Se precisa tocar muitos arquivos, quebrar a fase.
+Anti-padrões
+Codar sem ler.
+Corrigir uma coisa e refatorar dez.
+Criar camada nova sem necessidade.
+Fazer arquitetura futura antes de resolver o problema atual.
+Fazer mudança “bonita” que aumenta complexidade.
+🧪 Superpowers — TDD rigoroso
+Quando usar
+
+Imediatamente depois do ritual Karpathy.
+
+Ciclo obrigatório
+1. Escrever teste que descreve o comportamento esperado
+2. Rodar teste
+3. Confirmar falha vermelha
+4. Escrever o mínimo de código
+5. Rodar teste
+6. Confirmar verde
+7. Refatorar mantendo verde
+Regras
+Teste primeiro.
+Código depois.
+Refactor por último.
+Nunca inverter a ordem.
+Teste define contrato.
+Código serve ao teste.
+Se for difícil testar, rever design.
+Teste unitário valida função.
+Teste de integração valida fluxo.
+Teste end-to-end valida experiência.
+Anti-padrões
+Codar e depois inventar teste.
+Testar só o caminho feliz.
+Ignorar erro porque “parece funcionar”.
+Fazer mock demais e não testar comportamento real.
+Passar teste removendo validação importante.
+Pular teste porque a mudança parece pequena.
+🔬 AutoResearch — Loop de melhoria por experimento
+Quando usar
+
+Use AutoResearch apenas quando houver métrica clara.
+
+Exemplos:
+
+melhorar performance
+reduzir erro
+melhorar precisão
+comparar prompts
+melhorar ranking
+otimizar benchmark
+testar abordagem A vs B
+reduzir tempo de execução
+melhorar qualidade de saída
+validar refactor com evidência
+comparar modelos, parâmetros ou estratégias
+melhorar cobertura de testes
+melhorar taxa de sucesso de um fluxo
+Quando NÃO usar
+
+Não usar AutoResearch quando:
+
+não existe métrica
+a tarefa é apenas correção simples
+a melhoria é subjetiva demais
+o custo de testar é maior que o benefício
+o usuário pediu só uma mudança direta
+não há como comparar antes/depois
+Como aplicar
+Definir métrica antes de alterar.
+Registrar estado atual.
+Criar hipótese pequena.
+Fazer uma mudança mínima.
+Rodar teste, benchmark ou validação.
+Comparar resultado antes/depois.
+Manter se melhorou.
+Reverter se piorou.
+Registrar decisão.
+Template obrigatório
+AutoResearch:
+- Métrica:
+- Estado atual:
+- Hipótese:
+- Mudança mínima:
+- Resultado:
+- Decisão: manter / reverter / testar outra variação
+Regra principal
+
+Nenhuma melhoria entra por impressão.
+
+Só entra com evidência.
+
+Anti-padrões
+“Acho que melhorou”.
+Mudar várias coisas ao mesmo tempo.
+Não registrar baseline.
+Não conseguir reproduzir o teste.
+Manter mudança sem ganho real.
+Escolher resultado por gosto pessoal.
+Otimizar sem saber o que está medindo.
+🎭 Playwright MCP — Validação real no navegador
+Quando usar
+
+Use Playwright MCP quando a tarefa envolver:
+
+interface web
+página
+botão
+formulário
+modal
+login
+navegação
+fluxo de usuário
+scraping permitido
+teste end-to-end
+validação visual
+comportamento no navegador
+bug que só aparece na UI
+console error
+estado de loading
+upload ou download pelo navegador
+responsividade básica
+Como aplicar
+Abrir a aplicação no navegador.
+Executar o fluxo como usuário real.
+Validar se o comportamento esperado acontece.
+Capturar erro, estado ou comportamento inesperado.
+Corrigir apenas o necessário.
+Rodar novamente.
+Só considerar pronto quando passar no navegador.
+Uso obrigatório
+
+Playwright MCP é obrigatório quando:
+
+a mudança afeta front-end
+existe interação de usuário
+existe fluxo visual
+existe formulário
+existe botão
+existe navegação entre telas
+existe bug que depende do navegador
+a tarefa pede validação real da interface
+Template obrigatório
+Playwright MCP:
+- Fluxo testado:
+- Resultado esperado:
+- Resultado observado:
+- Erro encontrado:
+- Correção feita:
+- Status final:
+Regra principal
+
+Não considerar uma feature web pronta sem validação real no navegador.
+
+Anti-padrões
+Dizer que funciona sem abrir a UI.
+Confiar só no código.
+Testar só componente isolado quando o problema é fluxo.
+Ignorar erro visual.
+Ignorar console error.
+Ignorar comportamento diferente entre navegador e teste unitário.
+Validar só com print sem interagir.
+📊 Graphify — Knowledge Graph do Codebase
+Quando usar
+
+Use Graphify:
+
+ao fim de cada fase GSD
+ao retomar o projeto após pausa
+depois de refactor
+antes de mudança arquitetural
+quando houver suspeita de acoplamento ruim
+quando uma mudança tocar muitos módulos
+quando o projeto começar a ficar confuso
+Como aplicar
+Rodar Graphify na raiz do projeto.
+Identificar comunidades de módulos.
+Verificar acoplamento.
+Procurar módulos órfãos.
+Procurar pontos críticos.
+Atualizar este CLAUDE.md com decisões relevantes.
+O que procurar
+Nós com grau muito alto = acoplamento excessivo.
+Comunidades bem definidas = boa separação.
+Pontes únicas entre comunidades = pontos críticos.
+Módulos órfãos = possível código morto.
+Crescimento estranho do grafo = mudança mal contida.
+Dependências circulares = risco de manutenção.
+Arquivos centrais demais = possível violação de responsabilidade única.
+Template obrigatório
+Graphify:
+- Comunidades principais:
+- Módulos muito conectados:
+- Pontes críticas:
+- Possível código morto:
+- Risco arquitetural:
+- Decisão registrada:
+Regra principal
+
+Se a mudança aumentou muito o acoplamento, rever a fase.
+
+🧩 COMO DECIDIR QUAL MODO USAR
+Sempre usar
+Caveman
+GSD
+Karpathy
+Usar quando tiver código
+Superpowers
+Usar quando for feature, arquitetura ou decisão importante
+GStack
+Usar quando tiver métrica clara
+AutoResearch
+Usar quando envolver web/UI
+Playwright MCP
+Usar no fim da fase
+Graphify
+🔁 FLUXO PADRÃO DE TRABALHO
+
+Para qualquer tarefa relevante, seguir:
+
+1. Entender pedido
+2. Verificar stack
+3. Aplicar GStack se for decisão ou feature
+4. Dividir com GSD
+5. Escolher uma fase
+6. Executar ritual Karpathy
+7. Escrever teste com Superpowers
+8. Implementar mínimo necessário
+9. Rodar testes
+10. Se houver métrica, aplicar AutoResearch
+11. Se houver UI/web, validar com Playwright MCP
+12. Rodar Graphify se a fase alterar estrutura relevante
+13. Resumir resultado em Caveman
+🧪 CHECKLIST ANTES DE CODAR
+[ ] Entendi o pedido?
+[ ] O escopo está claro?
+[ ] Isso precisa de GStack?
+[ ] A tarefa foi quebrada em fases?
+[ ] Escolhi apenas uma fase?
+[ ] Li os arquivos relevantes?
+[ ] Defini o objetivo em uma frase?
+[ ] Escolhi a menor mudança possível?
+[ ] Listei os arquivos que serão alterados?
+[ ] Pensei nos efeitos colaterais?
+[ ] Escrevi o teste primeiro?
+[ ] O teste falhou vermelho?
+✅ CHECKLIST DEPOIS DE CODAR
+[ ] O teste ficou verde?
+[ ] A mudança foi mínima?
+[ ] Não criei abstração desnecessária?
+[ ] Não refatorei fora do escopo?
+[ ] Rodei testes relevantes?
+[ ] Se tinha UI, validei com Playwright MCP?
+[ ] Se tinha métrica, validei com AutoResearch?
+[ ] Se alterou arquitetura, rodei Graphify?
+[ ] Atualizei decisões importantes no CLAUDE.md?
+[ ] Resumi o que foi feito?
+🧯 REGRAS DE SEGURANÇA
+Nunca fazer
+Vazar segredo.
+Expor token.
+Commitar .env.
+Remover validação sem motivo.
+Desabilitar teste para passar build.
+Ignorar erro de segurança.
+Fazer scraping proibido.
+Automatizar ação sensível sem autorização.
+Fazer mudança destrutiva sem explicar.
+Rodar comando perigoso sem necessidade.
+Apagar arquivo sem confirmar impacto.
+Mexer em produção sem plano claro.
+Antes de mexer em autenticação, pagamento, dados ou permissão
+
+Responder:
+
+Segurança:
+- Dado sensível envolvido:
+- Risco:
+- Proteção atual:
+- Mudança proposta:
+- Como validar:
+🧱 PADRÃO DE IMPLEMENTAÇÃO
+Toda mudança deve ser
+pequena
+testável
+reversível
+clara
+localizada
+validada
+Preferir
+código simples
+função pequena
+nomes claros
+teste explícito
+pouca mágica
+menos dependências
+fluxo fácil de entender
+comportamento observável
+Evitar
+arquitetura grande
+abstração antecipada
+refactor oportunista
+dependência desnecessária
+mudança em muitos arquivos
+solução “bonita” mas difícil de manter
+mudança sem teste
+solução que só o agente entende
+🧾 PADRÃO DE RESPOSTA
+
+Toda resposta deve seguir Caveman.
+
+Quando concluir algo
+Feito.
+- O que foi alterado:
+- Como foi validado:
+- O que falta:
+Quando estiver planejando
+Plano:
+- Fase 1:
+- Fase 2:
+- Fase 3:
+Quando encontrar problema
+Problema:
+- Causa:
+- Impacto:
+- Correção:
+Quando houver bloqueio
+Bloqueio:
+- O que falta:
+- Como resolver:
+Quando usar AutoResearch
+AutoResearch:
+- Métrica:
+- Hipótese:
+- Resultado:
+- Decisão:
+Quando usar Playwright MCP
+Playwright MCP:
+- Fluxo testado:
+- Resultado:
+- Erro:
+- Status:
+📌 CONTEXTO DO PROJETO ANTIGRAVITY
+
+Preencher conforme o projeto evolui.
+
+Stack
+Linguagem principal:
+Framework:
+Banco de dados:
+Infra / deploy:
+Test runner:
+Package manager:
+Browser testing:
+Linter:
+Formatter:
+Decisões arquiteturais já tomadas
+Adicionar conforme surgirem.
+Fase atual
+Atualizar a cada mudança de fase GSD.
+O que NÃO fazer neste projeto
+Adicionar conforme aprendizados.
+Métricas importantes
+Performance:
+Qualidade:
+Testes:
+UX:
+Erros:
+Tempo de execução:
+Fluxos web importantes para Playwright MCP
+Fluxo 1:
+Fluxo 2:
+Fluxo 3:
+Experimentos AutoResearch
+
+Registrar assim:
+
+Experimento:
+- Data:
+- Métrica:
+- Hipótese:
+- Resultado:
+- Decisão:
+🧠 REGRA FINAL
+
+Não seja agente ansioso.
+
+Primeiro entende.
+
+Depois divide.
+
+Depois lê.
+
+Depois testa.
+
+Depois muda.
+
+Depois valida.
+
+Depois mede.
+
+Depois registra.
+
+Código bom é mudança pequena que prova que funciona.
