@@ -8,16 +8,18 @@ Este repositório contém as regras e comportamentos do **Antigravity Stack**, p
 
 ## ⚙️ Antigravity Stack
 
-A inteligência por trás do código é movida por 8 modos fundamentais que operam em uma cadeia de responsabilidade:
+A inteligência por trás do código é movida por 10 modos fundamentais que operam em uma cadeia de responsabilidade:
 
 1. **🚀 GStack:** Pensar como equipe de produto (CEO, UX, Eng, Segurança, QA, PM) ANTES de qualquer código.
 2. **⚡ GSD (Get Shit Done):** Quebrar toda tarefa em fases pequenas com entregas claras.
-3. **🧠 Karpathy Rules:** Leitura antes de escrita, solução mínima, mudança cirúrgica, sem abstrações prematuras.
-4. **🧪 Superpowers (TDD):** Teste Vermelho → Código Verde → Refatorar. Nunca inverter.
-5. **🔬 AutoResearch:** Loop de melhoria por experimento — só entra com evidência, nunca por impressão.
-6. **🎭 Playwright MCP:** Validação real no navegador quando a tarefa envolver web/UI.
-7. **📊 Graphify:** Mapear o codebase para detectar acoplamentos e riscos.
-8. **🦴 Caveman Mode:** Comunicação curta, direta e primitiva. Sem enrolação.
+3. **🎨 Impeccable:** Design, UX, UI — hierarquia visual, responsividade, estados, tipografia, contraste e anti-padrões visuais.
+4. **🧠 Karpathy Rules:** Leitura antes de escrita, solução mínima, mudança cirúrgica, sem abstrações prematuras.
+5. **🧪 Superpowers (TDD):** Teste Vermelho → Código Verde → Refatorar. Nunca inverter.
+6. **🔬 AutoResearch:** Loop de melhoria por experimento — só entra com evidência, nunca por impressão.
+7. **🎭 Playwright MCP:** Validação real no navegador quando a tarefa envolver web/UI.
+8. **🔌 MCP SDK:** Criar tools MCP próprias quando uma ação repetitiva puder virar ferramenta.
+9. **📊 Graphify:** Mapear o codebase para detectar acoplamentos e riscos.
+10. **🦴 Caveman Mode:** Comunicação curta, direta e primitiva. Sem enrolação.
 
 ---
 
@@ -42,15 +44,17 @@ curl -sSL https://raw.githubusercontent.com/danieldelima037/the-nightmare-skills
 ### 1. Inicialização
 Sempre que iniciar um projeto ou conversa, a IA deve exibir o status do stack:
 > **⚙️ Antigravity stack ativo:**
-> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 🔬 AutoResearch ✓ · 🎭 Playwright MCP ✓ · 📊 Graphify ✓
+> 🦴 Caveman ✓ · 🚀 GStack ✓ · ⚡ GSD ✓ · 🎨 Impeccable ✓ · 🧠 Karpathy ✓ · 🧪 Superpowers ✓ · 🔬 AutoResearch ✓ · 🎭 Playwright MCP ✓ · 🔌 MCP SDK ✓ · 📊 Graphify ✓
 
 ### 2. Cadeia de Execução
 - **Problema Detectado?** GStack avalia o impacto.
 - **Vai Codar?** GSD planeja as fases.
+- **Envolve UI?** Impeccable planeja qualidade visual e UX.
 - **Antes de tocar no arquivo?** Karpathy ritualiza a leitura.
 - **Implementando?** Superpowers garante os testes.
 - **Há métrica?** AutoResearch testa variações com evidência.
 - **Envolve web/UI?** Playwright MCP valida no navegador real.
+- **Ação repetitiva?** MCP SDK transforma em ferramenta.
 - **Finalizou?** Graphify verifica a integridade.
 - **Respondendo ao Usuário?** Caveman mantém a brevidade.
 
